@@ -6,6 +6,8 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
+    "@hono/trpc-server": "^0.3.2",
+    "@trpc/server": "^10.45.2",
     "hono": "^4.6.12"
   },
   "devDependencies": {
