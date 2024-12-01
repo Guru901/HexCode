@@ -7,6 +7,7 @@
     "npm:@neondatabase/serverless@~0.10.4": "0.10.4",
     "npm:@trpc/server@^10.45.2": "10.45.2",
     "npm:@types/pg@^8.11.10": "8.11.10",
+    "npm:drizzle-kit@*": "0.28.1_esbuild@0.19.12",
     "npm:drizzle-kit@~0.28.1": "0.28.1_esbuild@0.19.12",
     "npm:drizzle-orm@~0.36.4": "0.36.4_@types+pg@8.11.10_pg@8.13.1",
     "npm:hono@^4.6.12": "4.6.12",
