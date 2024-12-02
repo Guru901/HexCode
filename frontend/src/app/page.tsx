@@ -1,7 +1,9 @@
-export default async function Home() {
+import NavBar from "@/components/Navbar/page";
+
+export default function App() {
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <NavBar />
     </div>
   );
 }

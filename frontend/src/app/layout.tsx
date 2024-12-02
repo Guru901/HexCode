@@ -1,21 +1,36 @@
-import "~/styles/globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import "@/styles/globals.css";
 
-import { Archivo_Narrow } from "next/font/google";
 import { type Metadata } from "next";
+import { Roboto } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 
-const archivo = Archivo_Narrow({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "HexCode",
-  description: "HexCode is a Cloud IDE.",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${archivo.className}`}>
-      <body>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={roboto.className}>
+          <ThemeProvider
+            attribute={"class"}
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
