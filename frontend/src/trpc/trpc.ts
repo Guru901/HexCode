@@ -9,10 +9,10 @@ export const saveThingsClient = createTRPCClient<SaveThingsRouter>({
   ],
 });
 
-export const envServiceClient = createTRPCClient<EnvRouter>({
+export const envClient = createTRPCClient<EnvRouter>({
   links: [
     httpBatchLink({
-      url: "http://localhost:6767/trpc",
+      url: "http://localhost:8787/trpc",
     }),
   ],
 });
