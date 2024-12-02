@@ -1,19 +1,16 @@
 import { Hono } from "hono";
-import { appRouter } from "./trpc.ts";
 import { trpcServer } from "@hono/trpc-server";
+import { appRouter } from "./trpc";
+import { inferRouterInputs } from "@trpc/server";
 
 const app = new Hono();
 
-app.use(
+app.all(
   "/trpc/*",
   trpcServer({
     router: appRouter,
   })
 );
 
-Deno.serve(
-  {
-    port: 8080,
-  },
-  app.fetch
-);
+export default app;
+export type AppRouter = inferRouterInputs<typeof appRouter>;

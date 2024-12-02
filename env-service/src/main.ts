@@ -19,3 +19,5 @@ serve({
   fetch: app.fetch,
   port,
 });
+
+export type AppRouter = typeof appRouter;

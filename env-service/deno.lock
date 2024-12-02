@@ -3,6 +3,7 @@
   "specifiers": {
     "npm:@hono/node-server@^1.13.7": "1.13.7_hono@4.6.12",
     "npm:@hono/trpc-server@~0.3.2": "0.3.2_@trpc+server@10.45.2_hono@4.6.12",
+    "npm:@trpc/server@^10.45.1": "10.45.2",
     "npm:@trpc/server@^10.45.2": "10.45.2",
     "npm:@types/node@^20.11.17": "20.17.9",
     "npm:hono@^4.6.12": "4.6.12",
