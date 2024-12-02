@@ -15,7 +15,7 @@ export function Terminal() {
   const parmas = useSearchParams();
 
   useEffect(() => {
-    if (!terminalRef.current || xtermRef.current) return;
+    if (!terminalRef.current) return;
     // const socket = getSocket(parmas.get("port"));
 
     // if (socket) {
@@ -69,12 +69,10 @@ export function Terminal() {
       //   socket?.emit("terminal:write", {
       //     command: e,
       //   });
-      console.log(e);
-    });
 
-    // socket?.on("terminal:data", (data) => {
-    //   term.write(data);
-    // });
+      // send to backend
+      term.write(e);
+    });
 
     return () => {
       resizeObserver.disconnect();

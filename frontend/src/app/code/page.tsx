@@ -3,9 +3,9 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import { CodeEditor } from "@/components/CodeEditor/page";
 import { FileSidebar } from "@/components/FileSidebar/page";
 import { Terminal } from "@/components/terminal/page";
+import { CodeEditor } from "@/components/CodeEditor/page";
 
 export default function Code() {
   return (

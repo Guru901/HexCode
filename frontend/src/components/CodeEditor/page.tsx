@@ -1,27 +1,11 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 import { useEffect, useRef } from "react";
-import * as monaco from "monaco-editor";
+import { Editor } from "@monaco-editor/react";
 
 export function CodeEditor() {
-  const params = useSearchParams();
-  const editorRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const editor = monaco.editor.create(editorRef.current!, {
-      value: "console.log('Hello, world!')",
-      language: "javascript",
-      theme: "vs-dark",
-      minimap: {
-        enabled: false,
-      },
-    });
-
-    // return () => {
-    //   editor.dispose();
-    // };
-  }, []);
+  // const params = useSearchParams();
 
   //   useEffect(() => {
   //     const socket = getSocket(params.get("port"));
@@ -31,5 +15,15 @@ export function CodeEditor() {
   //     });
   //   }, []);
 
-  return <div className="h-full w-full" ref={editorRef}></div>;
+  return (
+    <Editor
+      theme="vs-dark"
+      defaultLanguage="javascript"
+      options={{
+        padding: {
+          top: 10,
+        },
+      }}
+    />
+  );
 }
