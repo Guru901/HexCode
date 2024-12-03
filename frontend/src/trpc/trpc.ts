@@ -1,15 +1,7 @@
-import { createTRPCClient, httpBatchLink } from "@trpc/client";
+import { createTRPCProxyClient, httpBatchLink } from "@trpc/client";
 import type { SaveThingsRouter, EnvRouter } from "../../../shared/trpcTypes";
 
-export const saveThingsClient = createTRPCClient<SaveThingsRouter>({
-  links: [
-    httpBatchLink({
-      url: "http://localhost:8787/trpc",
-    }),
-  ],
-});
-
-export const envClient = createTRPCClient<EnvRouter>({
+export const saveThingsClient = createTRPCProxyClient<SaveThingsRouter>({
   links: [
     httpBatchLink({
       url: "http://localhost:8787/trpc",
