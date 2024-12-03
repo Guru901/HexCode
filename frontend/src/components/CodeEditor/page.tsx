@@ -18,6 +18,7 @@ export function CodeEditor() {
   return (
     <Editor
       theme="vs-dark"
+      defaultValue="console.log('Hello, world!');"
       defaultLanguage="javascript"
       options={{
         padding: {

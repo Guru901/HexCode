@@ -6,6 +6,7 @@ import {
 import { FileSidebar } from "@/components/FileSidebar/page";
 import { Terminal } from "@/components/terminal/page";
 import { CodeEditor } from "@/components/CodeEditor/page";
+import { Browser } from "@/components/Browser/page";
 
 export default function Code() {
   return (
@@ -32,7 +33,7 @@ export default function Code() {
         </ResizablePanel>
         <ResizableHandle />
         <ResizablePanel defaultSize={25} minSize={15}>
-          <div className="h-full w-full bg-gray-800" />
+          <Browser />
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>
