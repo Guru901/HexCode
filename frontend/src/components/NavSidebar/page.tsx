@@ -110,9 +110,9 @@ export default function NavSidebar() {
   }, []);
 
   return (
-    <div className="flex h-screen w-56 flex-col gap-[3px] text-white">
+    <div className="h-[calc(100vh - 1rem)] flex w-56 flex-col gap-[3px] text-white">
       <UserInfo />
-      <div className="flex h-full flex-col bg-[#111]">
+      <div className="flex h-full flex-col rounded-md bg-[#111]">
         <div className="border-b border-gray-800 p-4">
           <CreatePlaygroundsDialogComponent />
         </div>

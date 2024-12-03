@@ -7,7 +7,7 @@ export default function UserInfo() {
   const { user } = useUser();
 
   return (
-    <div className="flex items-center gap-4 bg-[#111] p-3">
+    <div className="flex items-center gap-4 rounded-md bg-[#111] p-3">
       {user?.imageUrl && (
         <Image
           src={user?.imageUrl}
